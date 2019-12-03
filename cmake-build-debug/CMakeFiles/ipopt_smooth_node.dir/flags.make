@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++11 -O3 -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/coin -I/usr/local/include/adolc 
+CXX_INCLUDES = -I/usr/local/include/coin -I/usr/local/include/adolc -I/home/leo/code/plan_smooth -I/home/leo/code/plan_smooth/common -I/home/leo/code/plan_smooth/smoother_model 
 

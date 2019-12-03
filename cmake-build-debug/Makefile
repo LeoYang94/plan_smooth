@@ -123,6 +123,33 @@ ipopt_smooth_node/fast:
 	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/build
 .PHONY : ipopt_smooth_node/fast
 
+common/line_segment2d.o: common/line_segment2d.cc.o
+
+.PHONY : common/line_segment2d.o
+
+# target to build an object file
+common/line_segment2d.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o
+.PHONY : common/line_segment2d.cc.o
+
+common/line_segment2d.i: common/line_segment2d.cc.i
+
+.PHONY : common/line_segment2d.i
+
+# target to preprocess a source file
+common/line_segment2d.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.i
+.PHONY : common/line_segment2d.cc.i
+
+common/line_segment2d.s: common/line_segment2d.cc.s
+
+.PHONY : common/line_segment2d.s
+
+# target to generate assembly for a file
+common/line_segment2d.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.s
+.PHONY : common/line_segment2d.cc.s
+
 main.o: main.cc.o
 
 .PHONY : main.o
@@ -150,6 +177,114 @@ main.cc.s:
 	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/main.cc.s
 .PHONY : main.cc.s
 
+plan_path_smoother.o: plan_path_smoother.cc.o
+
+.PHONY : plan_path_smoother.o
+
+# target to build an object file
+plan_path_smoother.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o
+.PHONY : plan_path_smoother.cc.o
+
+plan_path_smoother.i: plan_path_smoother.cc.i
+
+.PHONY : plan_path_smoother.i
+
+# target to preprocess a source file
+plan_path_smoother.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.i
+.PHONY : plan_path_smoother.cc.i
+
+plan_path_smoother.s: plan_path_smoother.cc.s
+
+.PHONY : plan_path_smoother.s
+
+# target to generate assembly for a file
+plan_path_smoother.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.s
+.PHONY : plan_path_smoother.cc.s
+
+smoother_model/adolc_ipopt_smoother_model.o: smoother_model/adolc_ipopt_smoother_model.cc.o
+
+.PHONY : smoother_model/adolc_ipopt_smoother_model.o
+
+# target to build an object file
+smoother_model/adolc_ipopt_smoother_model.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o
+.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.o
+
+smoother_model/adolc_ipopt_smoother_model.i: smoother_model/adolc_ipopt_smoother_model.cc.i
+
+.PHONY : smoother_model/adolc_ipopt_smoother_model.i
+
+# target to preprocess a source file
+smoother_model/adolc_ipopt_smoother_model.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.i
+.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.i
+
+smoother_model/adolc_ipopt_smoother_model.s: smoother_model/adolc_ipopt_smoother_model.cc.s
+
+.PHONY : smoother_model/adolc_ipopt_smoother_model.s
+
+# target to generate assembly for a file
+smoother_model/adolc_ipopt_smoother_model.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.s
+.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.s
+
+smoother_model/adolc_smoother_model.o: smoother_model/adolc_smoother_model.cc.o
+
+.PHONY : smoother_model/adolc_smoother_model.o
+
+# target to build an object file
+smoother_model/adolc_smoother_model.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o
+.PHONY : smoother_model/adolc_smoother_model.cc.o
+
+smoother_model/adolc_smoother_model.i: smoother_model/adolc_smoother_model.cc.i
+
+.PHONY : smoother_model/adolc_smoother_model.i
+
+# target to preprocess a source file
+smoother_model/adolc_smoother_model.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.i
+.PHONY : smoother_model/adolc_smoother_model.cc.i
+
+smoother_model/adolc_smoother_model.s: smoother_model/adolc_smoother_model.cc.s
+
+.PHONY : smoother_model/adolc_smoother_model.s
+
+# target to generate assembly for a file
+smoother_model/adolc_smoother_model.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.s
+.PHONY : smoother_model/adolc_smoother_model.cc.s
+
+smoother_model/cg_smoother.o: smoother_model/cg_smoother.cc.o
+
+.PHONY : smoother_model/cg_smoother.o
+
+# target to build an object file
+smoother_model/cg_smoother.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o
+.PHONY : smoother_model/cg_smoother.cc.o
+
+smoother_model/cg_smoother.i: smoother_model/cg_smoother.cc.i
+
+.PHONY : smoother_model/cg_smoother.i
+
+# target to preprocess a source file
+smoother_model/cg_smoother.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.i
+.PHONY : smoother_model/cg_smoother.cc.i
+
+smoother_model/cg_smoother.s: smoother_model/cg_smoother.cc.s
+
+.PHONY : smoother_model/cg_smoother.s
+
+# target to generate assembly for a file
+smoother_model/cg_smoother.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.s
+.PHONY : smoother_model/cg_smoother.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ipopt_smooth_node"
 	@echo "... edit_cache"
+	@echo "... common/line_segment2d.o"
+	@echo "... common/line_segment2d.i"
+	@echo "... common/line_segment2d.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... plan_path_smoother.o"
+	@echo "... plan_path_smoother.i"
+	@echo "... plan_path_smoother.s"
+	@echo "... smoother_model/adolc_ipopt_smoother_model.o"
+	@echo "... smoother_model/adolc_ipopt_smoother_model.i"
+	@echo "... smoother_model/adolc_ipopt_smoother_model.s"
+	@echo "... smoother_model/adolc_smoother_model.o"
+	@echo "... smoother_model/adolc_smoother_model.i"
+	@echo "... smoother_model/adolc_smoother_model.s"
+	@echo "... smoother_model/cg_smoother.o"
+	@echo "... smoother_model/cg_smoother.i"
+	@echo "... smoother_model/cg_smoother.s"
 .PHONY : help
 
 

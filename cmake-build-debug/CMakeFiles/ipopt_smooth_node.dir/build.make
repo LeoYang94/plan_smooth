@@ -70,17 +70,92 @@ CMakeFiles/ipopt_smooth_node.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/main.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/main.cc -o CMakeFiles/ipopt_smooth_node.dir/main.cc.s
 
+CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o: CMakeFiles/ipopt_smooth_node.dir/flags.make
+CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o: ../plan_path_smoother.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o -c /home/leo/code/plan_smooth/plan_path_smoother.cc
+
+CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leo/code/plan_smooth/plan_path_smoother.cc > CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.i
+
+CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/plan_path_smoother.cc -o CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.s
+
+CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o: CMakeFiles/ipopt_smooth_node.dir/flags.make
+CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o: ../common/line_segment2d.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o -c /home/leo/code/plan_smooth/common/line_segment2d.cc
+
+CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leo/code/plan_smooth/common/line_segment2d.cc > CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.i
+
+CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/common/line_segment2d.cc -o CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.s
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o: CMakeFiles/ipopt_smooth_node.dir/flags.make
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o: ../smoother_model/adolc_smoother_model.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o -c /home/leo/code/plan_smooth/smoother_model/adolc_smoother_model.cc
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leo/code/plan_smooth/smoother_model/adolc_smoother_model.cc > CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.i
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/smoother_model/adolc_smoother_model.cc -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.s
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o: CMakeFiles/ipopt_smooth_node.dir/flags.make
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o: ../smoother_model/cg_smoother.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o -c /home/leo/code/plan_smooth/smoother_model/cg_smoother.cc
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leo/code/plan_smooth/smoother_model/cg_smoother.cc > CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.i
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/smoother_model/cg_smoother.cc -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.s
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o: CMakeFiles/ipopt_smooth_node.dir/flags.make
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o: ../smoother_model/adolc_ipopt_smoother_model.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o -c /home/leo/code/plan_smooth/smoother_model/adolc_ipopt_smoother_model.cc
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leo/code/plan_smooth/smoother_model/adolc_ipopt_smoother_model.cc > CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.i
+
+CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leo/code/plan_smooth/smoother_model/adolc_ipopt_smoother_model.cc -o CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.s
+
 # Object files for target ipopt_smooth_node
 ipopt_smooth_node_OBJECTS = \
-"CMakeFiles/ipopt_smooth_node.dir/main.cc.o"
+"CMakeFiles/ipopt_smooth_node.dir/main.cc.o" \
+"CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o" \
+"CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o" \
+"CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o" \
+"CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o" \
+"CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o"
 
 # External object files for target ipopt_smooth_node
 ipopt_smooth_node_EXTERNAL_OBJECTS =
 
 ../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/main.cc.o
+../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o
+../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o
+../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o
+../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o
+../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o
 ../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/build.make
 ../bin/ipopt_smooth_node: CMakeFiles/ipopt_smooth_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/ipopt_smooth_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leo/code/plan_smooth/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/ipopt_smooth_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ipopt_smooth_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
