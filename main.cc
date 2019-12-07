@@ -6,6 +6,7 @@
 /**
  * @file main.cc
  **/
+
 #include <fstream>
 #include <string>
 
@@ -47,6 +48,7 @@ bool ReadDataFromFile(const std::string &x_file_name,
   }
   return true;
 }
+
 void PrintDistance(std::vector<Point> path) {
   for (uint32_t i = 0; i < path.size() - 1; i++) {
     double distance = std::hypot(std::abs(path[i + 1].x() - path[i].x()),
@@ -54,6 +56,7 @@ void PrintDistance(std::vector<Point> path) {
     std::cout << "distance: " << distance << std::endl;
   }
 }
+
 int main() {
   std::vector<Point> raw_path;
   std::cout << "Start read data..." << std::endl;
@@ -65,18 +68,18 @@ int main() {
   }
   std::cout << "Start draw raw data..." << std::endl;
   // PrintDistance(raw_path);
-  //
-  // draw plot
-  // auto plot_line_origin = PolyLineToPlotLine(raw_path);
-  //  Gnuplot gp;
-  //  GnuDraw::GnuPlotInit(&gp);
-  //  GnuDraw::Plot(&gp);
-  //  GnuDraw::DrawOrietedLine(plot_line_origin, 1, BLUE, &gp);
-  //  // GnuDraw::DrawOrietedLine(plot_line, 1, MAGENTA, &gp);
-  //  GnuDraw::EndPlot(&gp);
-  //  sleep(10000);
   PlanPathSmoother smoother(true);
   std::vector<Point> smoothed_path;
   smoother.Smooth(raw_path, &smoothed_path);
+  // draw plot
+  auto plot_line_origin = PolyLineToPlotLine(raw_path);
+  auto plot_line_smoothed = PolyLineToPlotLine(smoothed_path);
+  Gnuplot gp;
+  GnuDraw::GnuPlotInit(&gp);
+  GnuDraw::Plot(&gp);
+  GnuDraw::DrawOrietedLine(plot_line_origin, 1, BLUE, &gp);
+  GnuDraw::DrawOrietedLine(plot_line_smoothed, 1, MAGENTA, &gp);
+  GnuDraw::EndPlot(&gp);
+  sleep(10000);
   return 0;
 }

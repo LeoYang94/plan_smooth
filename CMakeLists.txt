@@ -9,13 +9,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/lib)
 
 set(ipopt_dir "/usr/local")
 
-include_directories(${ipopt_dir}/include/coin ${ipopt_dir}/include/adolc)
+include_directories(${ipopt_dir}/include/coin ${ipopt_dir}/include/casadi)
 include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/common ${PROJECT_SOURCE_DIR}/smoother_model)
 
 link_directories(${ipopt_dir}/lib)
-link_directories(${ipopt_dir}/lib64)
 
-add_executable(ipopt_smooth_node main.cc plan_path_smoother.cc common/line_segment2d.cc smoother_model/adolc_smoother_model.cc smoother_model/cg_smoother.cc smoother_model/adolc_ipopt_smoother_model.cc)
-target_link_libraries(ipopt_smooth_node ipopt adolc boost_system boost_filesystem boost_iostreams)
+add_executable(ipopt_smooth_node main.cc plan_path_smoother.cc common/line_segment2d.cc smoother_model/casadi_smoother.cc smoother_model/cg_smoother.cc)
+target_link_libraries(ipopt_smooth_node ipopt casadi boost_system boost_filesystem boost_iostreams)
 
 

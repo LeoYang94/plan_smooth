@@ -4,8 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o"
   "CMakeFiles/ipopt_smooth_node.dir/main.cc.o"
   "CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o"
-  "CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o"
-  "CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o"
+  "CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.o"
   "CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o"
 )
 

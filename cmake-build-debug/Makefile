@@ -204,59 +204,32 @@ plan_path_smoother.cc.s:
 	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.s
 .PHONY : plan_path_smoother.cc.s
 
-smoother_model/adolc_ipopt_smoother_model.o: smoother_model/adolc_ipopt_smoother_model.cc.o
+smoother_model/casadi_smoother.o: smoother_model/casadi_smoother.cc.o
 
-.PHONY : smoother_model/adolc_ipopt_smoother_model.o
-
-# target to build an object file
-smoother_model/adolc_ipopt_smoother_model.cc.o:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.o
-.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.o
-
-smoother_model/adolc_ipopt_smoother_model.i: smoother_model/adolc_ipopt_smoother_model.cc.i
-
-.PHONY : smoother_model/adolc_ipopt_smoother_model.i
-
-# target to preprocess a source file
-smoother_model/adolc_ipopt_smoother_model.cc.i:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.i
-.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.i
-
-smoother_model/adolc_ipopt_smoother_model.s: smoother_model/adolc_ipopt_smoother_model.cc.s
-
-.PHONY : smoother_model/adolc_ipopt_smoother_model.s
-
-# target to generate assembly for a file
-smoother_model/adolc_ipopt_smoother_model.cc.s:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_ipopt_smoother_model.cc.s
-.PHONY : smoother_model/adolc_ipopt_smoother_model.cc.s
-
-smoother_model/adolc_smoother_model.o: smoother_model/adolc_smoother_model.cc.o
-
-.PHONY : smoother_model/adolc_smoother_model.o
+.PHONY : smoother_model/casadi_smoother.o
 
 # target to build an object file
-smoother_model/adolc_smoother_model.cc.o:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.o
-.PHONY : smoother_model/adolc_smoother_model.cc.o
+smoother_model/casadi_smoother.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.o
+.PHONY : smoother_model/casadi_smoother.cc.o
 
-smoother_model/adolc_smoother_model.i: smoother_model/adolc_smoother_model.cc.i
+smoother_model/casadi_smoother.i: smoother_model/casadi_smoother.cc.i
 
-.PHONY : smoother_model/adolc_smoother_model.i
+.PHONY : smoother_model/casadi_smoother.i
 
 # target to preprocess a source file
-smoother_model/adolc_smoother_model.cc.i:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.i
-.PHONY : smoother_model/adolc_smoother_model.cc.i
+smoother_model/casadi_smoother.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.i
+.PHONY : smoother_model/casadi_smoother.cc.i
 
-smoother_model/adolc_smoother_model.s: smoother_model/adolc_smoother_model.cc.s
+smoother_model/casadi_smoother.s: smoother_model/casadi_smoother.cc.s
 
-.PHONY : smoother_model/adolc_smoother_model.s
+.PHONY : smoother_model/casadi_smoother.s
 
 # target to generate assembly for a file
-smoother_model/adolc_smoother_model.cc.s:
-	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/adolc_smoother_model.cc.s
-.PHONY : smoother_model/adolc_smoother_model.cc.s
+smoother_model/casadi_smoother.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.s
+.PHONY : smoother_model/casadi_smoother.cc.s
 
 smoother_model/cg_smoother.o: smoother_model/cg_smoother.cc.o
 
@@ -303,12 +276,9 @@ help:
 	@echo "... plan_path_smoother.o"
 	@echo "... plan_path_smoother.i"
 	@echo "... plan_path_smoother.s"
-	@echo "... smoother_model/adolc_ipopt_smoother_model.o"
-	@echo "... smoother_model/adolc_ipopt_smoother_model.i"
-	@echo "... smoother_model/adolc_ipopt_smoother_model.s"
-	@echo "... smoother_model/adolc_smoother_model.o"
-	@echo "... smoother_model/adolc_smoother_model.i"
-	@echo "... smoother_model/adolc_smoother_model.s"
+	@echo "... smoother_model/casadi_smoother.o"
+	@echo "... smoother_model/casadi_smoother.i"
+	@echo "... smoother_model/casadi_smoother.s"
 	@echo "... smoother_model/cg_smoother.o"
 	@echo "... smoother_model/cg_smoother.i"
 	@echo "... smoother_model/cg_smoother.s"

@@ -15,12 +15,12 @@
 #include "common/point.h"
 #include "optimizer_param.h"
 #include "optimizer_state.h"
-#include "smoother_model/adolc_smoother_model.h"
+#include "smoother_model/casadi_smoother.h"
 
 PlanPathSmoother::PlanPathSmoother(const bool use_ipopt)
     : use_ipopt_(use_ipopt) {
   smooth_point_step_ = 0.4;
-  smoother_model_ = std::make_shared<AdolcSmootherModel>();
+  smoother_model_ = std::make_shared<CasadiSmoother>();
 }
 
 bool PlanPathSmoother::Smooth(const std::vector<Point> &raw_path_line,
@@ -53,10 +53,10 @@ bool PlanPathSmoother::MakePathParams(
   }
   OptimizerParam optimizer_param;
   optimizer_param.wheelbase = wheel_base_;
-  optimizer_param.bound_a = max_acceleration_;
-  optimizer_param.bound_v = max_speed_;
-  optimizer_param.bound_phy = max_steer_angle_;
-  optimizer_param.bound_w = max_steer_angle_rate_;
+  optimizer_param.bound_a = max_acceleration_; //最大加速度
+  optimizer_param.bound_v = max_speed_; // 最大速度
+  optimizer_param.bound_phy = max_steer_angle_; //最大转向角
+  optimizer_param.bound_w = max_steer_angle_rate_; //最大角速度
   optimizer_param.smooth_weight = smooth_weight_; //未找到，暂时值
   optimizer_param.fixed_point_num = 4.0;          //未找到，暂时值
   optimizer_param.states.clear();
@@ -72,8 +72,20 @@ bool PlanPathSmoother::Solve(const OptimizerParam &op,
   OptimizerParam dealed_op;
   ParamSepecialProcessing(op, &dealed_op);
   std::vector<double> smoothed_result;
-  smoother_model_->Run(dealed_op,&smoothed_result);
-  return true;
+  bool return_status = smoother_model_->Run(dealed_op, &smoothed_result);
+  if (return_status) {
+    for (int32_t i = 1; i <= ne_; i++) {
+      smooth_path_line->emplace_back(smoothed_result[i] + op.states.front().x,
+                                     smoothed_result[ne_ + i] +
+                                         op.states.front().y);
+    }
+  } else {
+    for_each(op.states.begin(), op.states.end(),
+             [&](const OptimizerState &state) {
+               smooth_path_line->emplace_back(state.x, state.y);
+             });
+  }
+  return return_status;
 }
 
 void PlanPathSmoother::ParamSepecialProcessing(

@@ -35,7 +35,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/coin"/>
-					<Add directory="/usr/local/include/adolc"/>
+					<Add directory="/usr/local/include/casadi"/>
 					<Add directory="/home/leo/code/plan_smooth"/>
 					<Add directory="/home/leo/code/plan_smooth/common"/>
 					<Add directory="/home/leo/code/plan_smooth/smoother_model"/>
@@ -63,7 +63,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/coin"/>
-					<Add directory="/usr/local/include/adolc"/>
+					<Add directory="/usr/local/include/casadi"/>
 					<Add directory="/home/leo/code/plan_smooth"/>
 					<Add directory="/home/leo/code/plan_smooth/common"/>
 					<Add directory="/home/leo/code/plan_smooth/smoother_model"/>
@@ -109,16 +109,10 @@
 		<Unit filename="/home/leo/code/plan_smooth/plan_path_smoother.h">
 			<Option target="ipopt_smooth_node"/>
 		</Unit>
-		<Unit filename="/home/leo/code/plan_smooth/smoother_model/adolc_ipopt_smoother_model.cc">
+		<Unit filename="/home/leo/code/plan_smooth/smoother_model/casadi_smoother.cc">
 			<Option target="ipopt_smooth_node"/>
 		</Unit>
-		<Unit filename="/home/leo/code/plan_smooth/smoother_model/adolc_ipopt_smoother_model.h">
-			<Option target="ipopt_smooth_node"/>
-		</Unit>
-		<Unit filename="/home/leo/code/plan_smooth/smoother_model/adolc_smoother_model.cc">
-			<Option target="ipopt_smooth_node"/>
-		</Unit>
-		<Unit filename="/home/leo/code/plan_smooth/smoother_model/adolc_smoother_model.h">
+		<Unit filename="/home/leo/code/plan_smooth/smoother_model/casadi_smoother.h">
 			<Option target="ipopt_smooth_node"/>
 		</Unit>
 		<Unit filename="/home/leo/code/plan_smooth/smoother_model/cg_smoother.cc">
