@@ -16,23 +16,27 @@
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ipopt_smooth_node" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ipopt_smooth_node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/main.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/smoother_model/casadi_smoother.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ipopt_smooth_node.dir/smoother_model/cg_smoother.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/smooth.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/smooth.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/optimizer_param.h" beforeDir="false" afterPath="$PROJECT_DIR$/optimizer_param.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimizer_state.h" beforeDir="false" afterPath="$PROJECT_DIR$/optimizer_state.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_path_smoother.cc" beforeDir="false" afterPath="$PROJECT_DIR$/plan_path_smoother.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoother_model/adolc_ipopt_smoother_model.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoother_model/adolc_ipopt_smoother_model.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoother_model/adolc_smoother_model.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoother_model/adolc_smoother_model.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoother_model/smoother_model.h" beforeDir="false" afterPath="$PROJECT_DIR$/smoother_model/smoother_model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_path_smoother.h" beforeDir="false" afterPath="$PROJECT_DIR$/plan_path_smoother.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoother_model/casadi_smoother.cc" beforeDir="false" afterPath="$PROJECT_DIR$/smoother_model/casadi_smoother.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ros_package/catkin_ws/src/CMakeLists.txt" />
   </component>
   <component name="RunManager">
     <configuration name="ipopt_smooth_node" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="smooth" TARGET_NAME="ipopt_smooth_node" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="smooth" RUN_TARGET_NAME="ipopt_smooth_node">
@@ -102,6 +106,21 @@
       <workItem from="1575279261687" duration="835000" />
       <workItem from="1575362309827" duration="1237000" />
       <workItem from="1575596916649" duration="12606000" />
+      <workItem from="1575798875151" duration="4940000" />
+      <workItem from="1575879302338" duration="3528000" />
+      <workItem from="1575884114031" duration="2357000" />
+      <workItem from="1575889943503" duration="5460000" />
+      <workItem from="1575953496651" duration="4723000" />
+      <workItem from="1575962845683" duration="470000" />
+      <workItem from="1575964006607" duration="7997000" />
+      <workItem from="1575984936256" duration="3056000" />
+      <workItem from="1576030385674" duration="4260000" />
+      <workItem from="1576115471861" duration="892000" />
+      <workItem from="1576118366296" duration="3911000" />
+      <workItem from="1576202657417" duration="599000" />
+      <workItem from="1576203705598" duration="487000" />
+      <workItem from="1576205119389" duration="601000" />
+      <workItem from="1576206195635" duration="447000" />
     </task>
     <servers />
   </component>
@@ -126,5 +145,58 @@
       <screen x="65" y="24" width="1615" height="1026" />
     </state>
     <state x="610" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/65.24.1615.1026@65.24.1615.1026" timestamp="1575597756903" />
+    <state x="780" y="297" key="FileChooserDialogImpl" timestamp="1576206255701">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="780" y="297" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1576206255701" />
+    <state width="1809" height="251" key="GridCell.Tab.0.bottom" timestamp="1576119762106">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="50" key="GridCell.Tab.0.bottom/65.24.1615.1026@65.24.1615.1026" timestamp="1575897690102" />
+    <state width="1809" height="251" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1576119762106" />
+    <state width="1809" height="251" key="GridCell.Tab.0.center" timestamp="1576119762105">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="50" key="GridCell.Tab.0.center/65.24.1615.1026@65.24.1615.1026" timestamp="1575897690100" />
+    <state width="1809" height="251" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1576119762105" />
+    <state width="1809" height="251" key="GridCell.Tab.0.left" timestamp="1576119762105">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="50" key="GridCell.Tab.0.left/65.24.1615.1026@65.24.1615.1026" timestamp="1575897690099" />
+    <state width="1809" height="251" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1576119762105" />
+    <state width="1809" height="251" key="GridCell.Tab.0.right" timestamp="1576119762105">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="50" key="GridCell.Tab.0.right/65.24.1615.1026@65.24.1615.1026" timestamp="1575897690101" />
+    <state width="1809" height="251" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1576119762105" />
+    <state width="1809" height="217" key="GridCell.Tab.1.bottom" timestamp="1576118767238">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="346" key="GridCell.Tab.1.bottom/65.24.1615.1026@65.24.1615.1026" timestamp="1575889472507" />
+    <state width="1809" height="217" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1576118767238" />
+    <state width="1809" height="217" key="GridCell.Tab.1.center" timestamp="1576118767238">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="346" key="GridCell.Tab.1.center/65.24.1615.1026@65.24.1615.1026" timestamp="1575889472506" />
+    <state width="1809" height="217" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1576118767238" />
+    <state width="1809" height="217" key="GridCell.Tab.1.left" timestamp="1576118767238">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="346" key="GridCell.Tab.1.left/65.24.1615.1026@65.24.1615.1026" timestamp="1575889472506" />
+    <state width="1809" height="217" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1576118767238" />
+    <state width="1809" height="217" key="GridCell.Tab.1.right" timestamp="1576118767238">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1569" height="346" key="GridCell.Tab.1.right/65.24.1615.1026@65.24.1615.1026" timestamp="1575889472507" />
+    <state width="1809" height="217" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1576118767238" />
+    <state x="596" y="237" key="RollbackChangesDialog" timestamp="1575889578231">
+      <screen x="65" y="24" width="1615" height="1026" />
+    </state>
+    <state x="596" y="237" key="RollbackChangesDialog/65.24.1615.1026@65.24.1615.1026" timestamp="1575889578231" />
+    <state x="603" y="362" key="com.intellij.ide.util.TipDialog" timestamp="1576206245660">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="533" y="352" key="com.intellij.ide.util.TipDialog/65.24.1615.1026@65.24.1615.1026" timestamp="1575884115205" />
+    <state x="603" y="362" key="com.intellij.ide.util.TipDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1576206245660" />
   </component>
 </project>

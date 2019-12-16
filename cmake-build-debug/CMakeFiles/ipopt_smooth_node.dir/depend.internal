@@ -5,6 +5,10 @@ CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o
  /home/leo/code/plan_smooth/common/line_segment2d.cc
  /home/leo/code/plan_smooth/common/line_segment2d.h
  /home/leo/code/plan_smooth/common/point.h
+CMakeFiles/ipopt_smooth_node.dir/common/linear_interpolation.cc.o
+ /home/leo/code/plan_smooth/common/linear_interpolation.cc
+ /home/leo/code/plan_smooth/common/linear_interpolation.h
+ /home/leo/code/plan_smooth/common/point.h
 CMakeFiles/ipopt_smooth_node.dir/main.cc.o
  /home/leo/code/plan_smooth/common/gnu_draw.h
  /home/leo/code/plan_smooth/common/gnuplot-iostream.h
@@ -16,6 +20,7 @@ CMakeFiles/ipopt_smooth_node.dir/main.cc.o
  /home/leo/code/plan_smooth/smoother_model/smoother_model.h
 CMakeFiles/ipopt_smooth_node.dir/plan_path_smoother.cc.o
  /home/leo/code/plan_smooth/common/line_segment2d.h
+ /home/leo/code/plan_smooth/common/linear_interpolation.h
  /home/leo/code/plan_smooth/common/point.h
  /home/leo/code/plan_smooth/optimizer_param.h
  /home/leo/code/plan_smooth/optimizer_state.h

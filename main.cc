@@ -57,8 +57,30 @@ void PrintDistance(std::vector<Point> path) {
   }
 }
 
+void PrintPlanResult(const std::vector<std::pair<double, double>> &plan,
+                     const int32_t counter) {
+  std::ofstream outfile_x("/home/leo/code/plan_smooth/data/data_out" +
+                              std::to_string(counter) + "x.txt",
+                          std::ios::trunc);
+  std::ofstream outfile_y("/home/leo/code/plan_smooth/data/data_out" +
+                              std::to_string(counter) + "y.txt",
+                          std::ios::trunc);
+  for (uint32_t i = 0; i < plan.size(); ++i) {
+    std::cout << "Plan result:"
+              << ": (" << plan[i].first << "," << plan[i].second << ")"
+              << std::endl;
+    outfile_x << plan[i].first << "\n";
+    outfile_y << plan[i].second << "\n";
+  }
+  outfile_x.close();
+  outfile_y.close();
+  std::cout << "write file!" << std::endl;
+}
+
 int main() {
   std::vector<Point> raw_path;
+  std::vector<Point> smoothed_path0;
+  std::vector<Point> smoothed_path1;
   std::cout << "Start read data..." << std::endl;
   if (!ReadDataFromFile("/home/leo/code/plan_smooth/data/data1x.txt",
                         "/home/leo/code/plan_smooth/data/data1y.txt",
@@ -66,6 +88,16 @@ int main() {
     std::cout << "wrong data!" << std::endl;
     return -1;
   }
+  //  if (!ReadDataFromFile("/home/leo/code/plan_smooth/data/data_out0x.txt",
+  //                        "/home/leo/code/plan_smooth/data/data_out0y.txt",
+  //                        &smoothed_path0)) {
+  //    std::cout << "wrong data 0 !" << std::endl;
+  //  }
+  //  if (!ReadDataFromFile("/home/leo/code/plan_smooth/data/data_out1x.txt",
+  //                        "/home/leo/code/plan_smooth/data/data_out1y.txt",
+  //                        &smoothed_path1)) {
+  //    std::cout << "wrong data 1 !" << std::endl;
+  //  }
   std::cout << "Start draw raw data..." << std::endl;
   // PrintDistance(raw_path);
   PlanPathSmoother smoother(true);
@@ -74,11 +106,14 @@ int main() {
   // draw plot
   auto plot_line_origin = PolyLineToPlotLine(raw_path);
   auto plot_line_smoothed = PolyLineToPlotLine(smoothed_path);
+  //auto plot_line_smoothed1 = PolyLineToPlotLine(smoothed_path1);
+  // PrintPlanResult(plot_line_smoothed, 1);
   Gnuplot gp;
   GnuDraw::GnuPlotInit(&gp);
   GnuDraw::Plot(&gp);
-  GnuDraw::DrawOrietedLine(plot_line_origin, 1, BLUE, &gp);
-  GnuDraw::DrawOrietedLine(plot_line_smoothed, 1, MAGENTA, &gp);
+  GnuDraw::DrawOrietedLine(plot_line_origin, 1, BLUE, &gp, "origin path" );
+  GnuDraw::DrawOrietedLine(plot_line_smoothed, 1, MAGENTA, &gp,"ipopt path");
+  // GnuDraw::DrawOrietedLine(plot_line_smoothed1, 1, LIGHTBLUE, &gp);
   GnuDraw::EndPlot(&gp);
   sleep(10000);
   return 0;

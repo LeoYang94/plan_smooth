@@ -15,7 +15,8 @@
 
 struct OptimizerParam {
   double bound_a = 0;
-  double bound_v = 0;
+  double bound_vx = 0;
+  double bound_vy = 0.0;
   double bound_phy = 0;
   double bound_w = 0;
   double wheelbase = 0;

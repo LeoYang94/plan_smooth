@@ -35,7 +35,7 @@ private:
   double wheel_base_ = 1.2;
   double max_acceleration_ = 4.0;
   double max_speed_ = 5.0;
-  double max_steer_angle_ = 0.52;
+  double max_steer_angle_ = 3.14;
   double max_steer_angle_rate_ = 1.5;
   double smooth_weight_ = 1000;
   // double fixed_point_num_ = 4.0;

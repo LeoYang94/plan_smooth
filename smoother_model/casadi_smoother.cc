@@ -38,6 +38,19 @@ bool CasadiSmoother::EvalConstraints(const OptimizerParam &param,
     fg->at(++counter) = (x(i + 1) - x(i)) * sin(x(2 * ne + i)) -
                         (x(ne + i + 1) - x(ne + i)) * cos(x(2 * ne + i));
   }
+  //    for (int32_t i = 1; i < ne; ++i) {
+  //      casadi::SX dx = (x(i + 1) - x(i));
+  //      casadi::SX dy = (x(ne + i + 1) - x(ne + i));
+  //      casadi::SX theta = (x(2 * ne + i));
+  //      casadi::SX vx =
+  //          (x(4 * ne + 1) + x(5 * ne + 1) + x(6 * ne + 1) + x(7 * ne + 1)) /
+  //          4;
+  //      casadi::SX vy =
+  //          (-x(4 * ne + 1) + x(5 * ne + 1) - x(6 * ne + 1) + x(7 * ne + 1)) /
+  //          4;
+  //      fg->at(++counter) = dx * (vx * sin(theta) + vy * cos(theta)) -
+  //                          dy * (vx * cos(theta) - vy * sin(theta));
+  //    }
   fg->at(++counter) = 0.0;
   // vertical line constrain: the state must on the vertical line
   fg->at(++counter) = 0.0;
@@ -49,12 +62,29 @@ bool CasadiSmoother::EvalConstraints(const OptimizerParam &param,
   }
   fg->at(++counter) = 0.0;
   // dtheta constrain: dtheta * wheel_base = tan(phy) * ds
+  //对全向麦克纳姆轮机器人来说，怎样才是合理的约束？？
+  //
   for (int32_t i = 1; i < ne; ++i) {
     casadi::SX dx = (x(i + 1) - x(i));
     casadi::SX dy = (x(ne + i + 1) - x(ne + i));
-    fg->at(++counter) = sqrt(pow(dx, 2) + pow(dy, 2)) * x(3 * ne + i) -
+    fg->at(++counter) = sqrt(pow(dx, 2) + pow(dy, 2)) * tan(x(3 * ne + i)) -
                         param.wheelbase * (x(2 * ne + i + 1) - x(2 * ne + i));
   }
+  //  for (int32_t i = 1; i < ne; ++i) {
+  //    casadi::SX dx = (x(i + 1) - x(i));
+  //    casadi::SX dy = (x(ne + i + 1) - x(ne + i));
+  //    casadi::SX theta = (x(2 * ne + i));
+  //    casadi::SX vx =
+  //        (x(4 * ne + 1) + x(5 * ne + 1) + x(6 * ne + 1) + x(7 * ne + 1)) / 4;
+  //    casadi::SX vy =
+  //        (-x(4 * ne + 1) + x(5 * ne + 1) - x(6 * ne + 1) + x(7 * ne + 1)) /
+  //        4;
+  //    casadi::SX w =
+  //        (-x(4 * ne + 1) + x(5 * ne + 1) + x(6 * ne + 1) - x(7 * ne + 1)) /
+  //        (4 * (0.17 + 0.20));
+  //    fg->at(++counter) = (x(2 * ne + i + 1) - x(2 * ne + i)) -
+  //                        w * dx / (vx * cos(theta) - vy * sin(theta));
+  //  }
   fg->at(++counter) = 0.0;
   // the next state at the front of current state
   for (int32_t i = 1; i < ne - 1; i++) {
@@ -103,6 +133,10 @@ bool CasadiSmoother::GetBoundsInfo(const OptimizerParam &param,
     x_l->at(i) = -param.bound_phy;
     x_u->at(i) = param.bound_phy;
   }
+  for (int32_t i = 4 * ne + 1; i <= 8 * ne; i++) {
+    x_l->at(i) = -param.bound_vx;
+    x_u->at(i) = param.bound_vx;
+  }
   // fix the start points and the end point
   for (int32_t i = 0; i < param.fixed_point_num; ++i) {
     x_l->at(i + 1) = param.states[i].x;
@@ -124,6 +158,18 @@ bool CasadiSmoother::GetBoundsInfo(const OptimizerParam &param,
   x_l->at(4 * ne) = 0;
   x_u->at(4 * ne) = 0;
 
+  x_l->at(5 * ne) = 0;
+  x_u->at(5 * ne) = 0;
+
+  x_l->at(6 * ne) = 0;
+  x_u->at(6 * ne) = 0;
+
+  x_l->at(7 * ne) = 0;
+  x_u->at(7 * ne) = 0;
+
+  x_l->at(8 * ne) = 0;
+  x_u->at(8 * ne) = 0;
+
   for (int32_t i = 0; i <= 3 * ne; i++) {
     g_l->at(i) = 0;
     g_u->at(i) = 0;
@@ -138,13 +184,18 @@ bool CasadiSmoother::GetBoundsInfo(const OptimizerParam &param,
 bool CasadiSmoother::GetStartingPoint(const OptimizerParam &param,
                                       const int32_t ne,
                                       std::vector<double> *const xi) const {
-  xi->resize(4 * param.states.size() + 1);
+  xi->resize(8 * param.states.size() + 1);
   for (int32_t i = 1; i <= ne; ++i) {
     xi->at(i) = param.states[i - 1].x;
     xi->at(ne + i) = param.states[i - 1].y;
     xi->at(2 * ne + i) = param.states[i - 1].theta;
     xi->at(3 * ne + i) = param.states[i - 1].phy;
+    xi->at(4 * ne + i) = param.states[i - 1].v1;
+    xi->at(5 * ne + i) = param.states[i - 1].v2;
+    xi->at(6 * ne + i) = param.states[i - 1].v3;
+    xi->at(7 * ne + i) = param.states[i - 1].v4;
   }
+
   double path_length = 0.0;
   for (int32_t i = 2; i <= ne; i++) {
     path_length += hypot((xi->at(i) - xi->at(i - 1)),
@@ -158,7 +209,7 @@ bool CasadiSmoother::Run(const OptimizerParam &dealed_op,
                          std::vector<double> *const smoother_results) const {
   const auto &ne =
       static_cast<int32_t>(static_cast<int32_t>(dealed_op.states.size()));
-  int32_t nx = 4 * ne + 1;
+  int32_t nx = 8 * ne + 1;
   int32_t ng = 4 * ne + 1;
   casadi::SX x = casadi::SX::sym("x", nx);
   casadi::SX f;

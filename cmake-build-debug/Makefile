@@ -150,6 +150,33 @@ common/line_segment2d.cc.s:
 	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.s
 .PHONY : common/line_segment2d.cc.s
 
+common/linear_interpolation.o: common/linear_interpolation.cc.o
+
+.PHONY : common/linear_interpolation.o
+
+# target to build an object file
+common/linear_interpolation.cc.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/linear_interpolation.cc.o
+.PHONY : common/linear_interpolation.cc.o
+
+common/linear_interpolation.i: common/linear_interpolation.cc.i
+
+.PHONY : common/linear_interpolation.i
+
+# target to preprocess a source file
+common/linear_interpolation.cc.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/linear_interpolation.cc.i
+.PHONY : common/linear_interpolation.cc.i
+
+common/linear_interpolation.s: common/linear_interpolation.cc.s
+
+.PHONY : common/linear_interpolation.s
+
+# target to generate assembly for a file
+common/linear_interpolation.cc.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/common/linear_interpolation.cc.s
+.PHONY : common/linear_interpolation.cc.s
+
 main.o: main.cc.o
 
 .PHONY : main.o
@@ -270,6 +297,9 @@ help:
 	@echo "... common/line_segment2d.o"
 	@echo "... common/line_segment2d.i"
 	@echo "... common/line_segment2d.s"
+	@echo "... common/linear_interpolation.o"
+	@echo "... common/linear_interpolation.i"
+	@echo "... common/linear_interpolation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

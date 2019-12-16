@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "common/line_segment2d.h"
+#include "common/linear_interpolation.h"
 #include "common/point.h"
 #include "optimizer_param.h"
 #include "optimizer_state.h"
@@ -19,7 +20,7 @@
 
 PlanPathSmoother::PlanPathSmoother(const bool use_ipopt)
     : use_ipopt_(use_ipopt) {
-  smooth_point_step_ = 0.4;
+  smooth_point_step_ = 0.5;
   smoother_model_ = std::make_shared<CasadiSmoother>();
 }
 
@@ -33,11 +34,14 @@ bool PlanPathSmoother::MakePathParams(
     const std::vector<Point> &raw_path_line,
     std::vector<Point> *const smooth_path_line) {
   std::vector<OptimizerState> path_state;
-  for (uint32_t i = 0; i < raw_path_line.size(); ++i) {
-    Point curr_point(raw_path_line[i]);
+  std::vector<Point> interpolation_points;
+  LinearInterpolation(raw_path_line, smooth_point_step_,
+                      &interpolation_points); //线性插值
+  for (uint32_t i = 0; i < interpolation_points.size(); ++i) {
+    Point curr_point(interpolation_points[i]);
     double theta = 0.0;
-    if (i != raw_path_line.size() - 1) {
-      Point next_point(raw_path_line[i + 1]);
+    if (i != interpolation_points.size() - 1) {
+      Point next_point(interpolation_points[i + 1]);
       Point p_error(next_point.x_ - curr_point.x_,
                     next_point.y_ - curr_point.y_);
       theta = atan2(p_error.y_, p_error.x_);
@@ -48,17 +52,22 @@ bool PlanPathSmoother::MakePathParams(
     state.x = curr_point.x_;
     state.y = curr_point.y_;
     state.theta = theta;
-    state.v = 0.8;
+    state.v1 = 0.0;
+    state.v2 = 0.0;
+    state.v3 = 0.0;
+    state.v4 = 0.0;
     path_state.emplace_back(state);
   }
   OptimizerParam optimizer_param;
   optimizer_param.wheelbase = wheel_base_;
   optimizer_param.bound_a = max_acceleration_; //最大加速度
-  optimizer_param.bound_v = max_speed_; // 最大速度
-  optimizer_param.bound_phy = max_steer_angle_; //最大转向角
+  // optimizer_param.bound_vx = max_speed_; // 最大速度
+  optimizer_param.bound_vx = 1.0;
+  optimizer_param.bound_vy = 0.5;
+  optimizer_param.bound_phy = max_steer_angle_;    //最大转向角
   optimizer_param.bound_w = max_steer_angle_rate_; //最大角速度
-  optimizer_param.smooth_weight = smooth_weight_; //未找到，暂时值
-  optimizer_param.fixed_point_num = 4.0;          //未找到，暂时值
+  optimizer_param.smooth_weight = smooth_weight_;  //未找到，暂时值
+  optimizer_param.fixed_point_num = 4.0;           //未找到，暂时值
   optimizer_param.states.clear();
   optimizer_param.states = path_state;
   return Solve(optimizer_param, smooth_path_line);

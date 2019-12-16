@@ -14,7 +14,7 @@ include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/common ${PROJECT
 
 link_directories(${ipopt_dir}/lib)
 
-add_executable(ipopt_smooth_node main.cc plan_path_smoother.cc common/line_segment2d.cc smoother_model/casadi_smoother.cc smoother_model/cg_smoother.cc)
+add_executable(ipopt_smooth_node main.cc plan_path_smoother.cc common/line_segment2d.cc smoother_model/casadi_smoother.cc smoother_model/cg_smoother.cc common/linear_interpolation.cc)
 target_link_libraries(ipopt_smooth_node ipopt casadi boost_system boost_filesystem boost_iostreams)
 
 

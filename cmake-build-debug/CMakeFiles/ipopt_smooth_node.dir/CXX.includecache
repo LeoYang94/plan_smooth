@@ -70,10 +70,6 @@ blitz/array.h
 windows.h
 -
 
-/home/leo/code/plan_smooth/common/line_segment2d.h
-point.h
-/home/leo/code/plan_smooth/common/point.h
-
 /home/leo/code/plan_smooth/common/point.h
 cmath
 -
@@ -102,22 +98,6 @@ optimizer_state.h
 
 /home/leo/code/plan_smooth/optimizer_state.h
 
-/home/leo/code/plan_smooth/plan_path_smoother.cc
-plan_path_smoother.h
-/home/leo/code/plan_smooth/plan_path_smoother.h
-vector
--
-common/line_segment2d.h
-/home/leo/code/plan_smooth/common/line_segment2d.h
-common/point.h
-/home/leo/code/plan_smooth/common/point.h
-optimizer_param.h
-/home/leo/code/plan_smooth/optimizer_param.h
-optimizer_state.h
-/home/leo/code/plan_smooth/optimizer_state.h
-smoother_model/casadi_smoother.h
-/home/leo/code/plan_smooth/smoother_model/casadi_smoother.h
-
 /home/leo/code/plan_smooth/plan_path_smoother.h
 memory
 -
@@ -128,20 +108,6 @@ optimizer_param.h
 common/point.h
 /home/leo/code/plan_smooth/common/point.h
 smoother_model/smoother_model.h
-/home/leo/code/plan_smooth/smoother_model/smoother_model.h
-
-/home/leo/code/plan_smooth/smoother_model/casadi_smoother.h
-vector
--
-casadi/casadi.hpp
--
-casadi/core/sparsity.hpp
--
-casadi/core/sparsity_interface.hpp
--
-optimizer_param.h
-/home/leo/code/plan_smooth/smoother_model/optimizer_param.h
-smoother_model.h
 /home/leo/code/plan_smooth/smoother_model/smoother_model.h
 
 /home/leo/code/plan_smooth/smoother_model/smoother_model.h
