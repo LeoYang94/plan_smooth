@@ -123,6 +123,33 @@ ipopt_smooth_node/fast:
 	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/build
 .PHONY : ipopt_smooth_node/fast
 
+bezier/NumericalMaths.o: bezier/NumericalMaths.cpp.o
+
+.PHONY : bezier/NumericalMaths.o
+
+# target to build an object file
+bezier/NumericalMaths.cpp.o:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/bezier/NumericalMaths.cpp.o
+.PHONY : bezier/NumericalMaths.cpp.o
+
+bezier/NumericalMaths.i: bezier/NumericalMaths.cpp.i
+
+.PHONY : bezier/NumericalMaths.i
+
+# target to preprocess a source file
+bezier/NumericalMaths.cpp.i:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/bezier/NumericalMaths.cpp.i
+.PHONY : bezier/NumericalMaths.cpp.i
+
+bezier/NumericalMaths.s: bezier/NumericalMaths.cpp.s
+
+.PHONY : bezier/NumericalMaths.s
+
+# target to generate assembly for a file
+bezier/NumericalMaths.cpp.s:
+	$(MAKE) -f CMakeFiles/ipopt_smooth_node.dir/build.make CMakeFiles/ipopt_smooth_node.dir/bezier/NumericalMaths.cpp.s
+.PHONY : bezier/NumericalMaths.cpp.s
+
 common/line_segment2d.o: common/line_segment2d.cc.o
 
 .PHONY : common/line_segment2d.o
@@ -294,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ipopt_smooth_node"
 	@echo "... edit_cache"
+	@echo "... bezier/NumericalMaths.o"
+	@echo "... bezier/NumericalMaths.i"
+	@echo "... bezier/NumericalMaths.s"
 	@echo "... common/line_segment2d.o"
 	@echo "... common/line_segment2d.i"
 	@echo "... common/line_segment2d.s"

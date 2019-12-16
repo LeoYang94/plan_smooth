@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/ipopt_smooth_node"
   "../bin/ipopt_smooth_node.pdb"
+  "CMakeFiles/ipopt_smooth_node.dir/bezier/NumericalMaths.cpp.o"
   "CMakeFiles/ipopt_smooth_node.dir/common/line_segment2d.cc.o"
   "CMakeFiles/ipopt_smooth_node.dir/common/linear_interpolation.cc.o"
   "CMakeFiles/ipopt_smooth_node.dir/main.cc.o"

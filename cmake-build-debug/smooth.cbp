@@ -5,7 +5,7 @@
 		<Option title="smooth"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/leo/code/plan_smooth/cmake-build-debug"/>
@@ -34,11 +34,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/include/coin"/>
 					<Add directory="/usr/local/include/casadi"/>
 					<Add directory="/home/leo/code/plan_smooth"/>
 					<Add directory="/home/leo/code/plan_smooth/common"/>
 					<Add directory="/home/leo/code/plan_smooth/smoother_model"/>
+					<Add directory="/home/leo/code/plan_smooth/bezier"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -62,11 +64,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/include/coin"/>
 					<Add directory="/usr/local/include/casadi"/>
 					<Add directory="/home/leo/code/plan_smooth"/>
 					<Add directory="/home/leo/code/plan_smooth/common"/>
 					<Add directory="/home/leo/code/plan_smooth/smoother_model"/>
+					<Add directory="/home/leo/code/plan_smooth/bezier"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -94,6 +98,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/leo/code/plan_smooth/bezier/NumericalMaths.cpp">
+			<Option target="ipopt_smooth_node"/>
+		</Unit>
+		<Unit filename="/home/leo/code/plan_smooth/bezier/NumericalMaths.hpp">
+			<Option target="ipopt_smooth_node"/>
+		</Unit>
 		<Unit filename="/home/leo/code/plan_smooth/common/line_segment2d.cc">
 			<Option target="ipopt_smooth_node"/>
 		</Unit>
@@ -129,6 +139,9 @@
 		</Unit>
 		<Unit filename="/home/leo/code/plan_smooth/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/leo/code/plan_smooth/../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
